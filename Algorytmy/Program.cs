@@ -47,21 +47,20 @@ namespace Alg_3._0
                double p3 = (p1 -p2);
 
              
-               // Console.WriteLine("p1: "  +p1);
-               // Console.WriteLine("p2: " +p2);
-               // Console.WriteLine("p3: " +p3);
+               Console.WriteLine("p1: "  +p1);
+               Console.WriteLine("p2: " +p2);
+               Console.WriteLine("p3: " +p3);
 
-                //u
-                double u = Math.Pow(p1 + p2, 1D / 3);
-                Console.WriteLine("u: " +  u);
+              
 
             
-                //v
-                if (p3 < 0)
+                //v,u
+                if (p3 < 0 || p1 + p2 < 0)
                 {
                     double v = Math.Pow((p3 * -1),1D /3) * -1;
                     Console.WriteLine("v: " +v);
-
+                    double u = Math.Pow((p1 + p2) * -1, 1D / 3) * -1;
+                    Console.WriteLine("u: " + u);
 
                     //x1
                     double x1 = u + v + w;
@@ -81,6 +80,8 @@ namespace Alg_3._0
                 {
                     double v = Math.Pow((p3), 1D / 3);
                     Console.WriteLine("v: " + v);
+                    double u = Math.Pow(p1 + p2, 1D / 3);
+                    Console.WriteLine("u: " + u);
 
                     //x1
                     double x1 = u + v + w;
